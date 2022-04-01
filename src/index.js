@@ -1,11 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Select from 'react-select';
 import './index.css';
+import x_small from './images/x_24x24.png';
+import o_small from './images/o_24x24.png';
 
 function Square(props) {
+  // Used https://reactgo.com/react-images/ to learn about adding images in react
+  if (props.value === null) {
+    return (
+      <button className="square" onClick={props.onClick} />
+    );
+    }
+
+  let image = props.value === 'X' ? x_small : o_small;
   return (
     <button className="square" onClick={props.onClick}>
-      {props.value}
+      <img src={image} alt={props.value} />
     </button>
   );
 }
