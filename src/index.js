@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Select from 'react-select';
-import './index.css';
+import ComboBox from "react-widgets/ComboBox";
+import './index.scss';
+import "react-widgets/styles.css";
 import x_small from './images/x_24x24.png';
 import o_small from './images/o_24x24.png';
 
@@ -126,6 +127,10 @@ class Game extends React.Component {
           />
         </div>
         <div className="game-info">
+          <ComboBox 
+            defaultValue="3x3"
+            data={["3x3", "4x4", "5x5"]}
+            />
           <div>{status}</div>
           <ol>{moves}</ol>
         </div>
