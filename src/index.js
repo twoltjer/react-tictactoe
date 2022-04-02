@@ -1,3 +1,10 @@
+/* 
+ * Thomas Woltjer
+ * Defines react components and functions used for the extended tic-tac-toe game.
+ * Also the "main" file of the program, run using the command "npm start".
+ * April 1, 2022
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ComboBox from "react-widgets/ComboBox";
